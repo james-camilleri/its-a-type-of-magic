@@ -5,10 +5,12 @@
   export let subtitle = ''
   export let large = false
   export let small = false
+  export let contain = false
   export let animate = false
   export let loop = false
   export let image = ''
   export let video = ''
+  export let caption: string | string[] | undefined = undefined
 
   let element: HTMLElement
   let displayTitle = ''
@@ -52,7 +54,26 @@
 </script>
 
 {#if image}
-  <section bind:this={element} data-background-image={image} />
+  <section
+    bind:this={element}
+    data-background-image={image}
+    data-background-size={contain ? 'contain' : 'cover'}
+  >
+    {#if caption && caption.length > 0}
+      <div class="caption">
+        <span
+          >{typeof caption === 'string' ? caption : caption[0]}<span
+            class="underscore">_</span
+          ></span
+        >
+        {#if Array.isArray(caption)}
+          {#each caption.slice(1) as text}
+            <span>{text}</span>
+          {/each}
+        {/if}
+      </div>
+    {/if}
+  </section>
 {:else if video}
   <section
     bind:this={element}
@@ -75,7 +96,7 @@
   </section>
 {/if}
 
-<style>
+<style lang="scss">
   .large {
     font-size: calc(var(--xxl) * var(--ratio));
   }
@@ -86,6 +107,27 @@
 
   p {
     margin-top: var(--lg);
+  }
+
+  .caption {
+    position: fixed;
+    right: -250px;
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: right;
+    background: rgb(255 255 255 / 90%);
+
+    > span:first-child {
+      font-weight: 400;
+    }
+  }
+
+  .underscore {
+    color: var(--primary);
   }
 
   .subtitle-only {
