@@ -107,6 +107,7 @@
 <Slide subtitle="interactive performance" />
 <Slide subtitle="co-creation" />
 <Slide
+  contain
   image={ObliterationRoom}
   caption={['Yayoi Kusama', 'Obliteration room']}
 />
