@@ -11,10 +11,10 @@
   subtitle="james camilleri & evina kipeni-thalassinou"
   large
 />
-<Slide video={TypoLFA} />
+<!-- <Slide video={TypoLFA} /> -->
 <Slide title="concept" />
 <Slide title="construction" />
-<Slide video={CloseUps} loop={true} />
+<!-- <Slide video={CloseUps} loop={true} /> -->
 <section
   data-background-iframe="https://stately.ai/viz/embed/71a899bf-d43a-4f95-b687-0ddaf0cc4386?mode=viz&panel=code&showOriginalLink=1&readOnly=1&pan=1&zoom=1&controls=1"
   data-background-interactive="true"
