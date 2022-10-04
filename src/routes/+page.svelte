@@ -75,6 +75,8 @@
   data-background-iframe="https://www.masswerk.at/elizabot/eliza.html"
   data-background-interactive="true"
   /> -->
+<!-- TODO: ELIZAAAAA -->
+
 <Slide title="bloomsbury theatre" />
 <Slide image={Bloomsbury} />
 <Slide image={WizardOfOz} />
@@ -120,6 +122,7 @@
 <Slide image={SonicBloom} caption={['Yuri Suzuki', 'Sonic Bloom (2022)']} />
 <Slide subtitle="conclusion" />
 <Slide
+  contain
   image={TheatreTypes}
   caption={['Different types of theater', 'Pinterest (n.d.)']}
 />
