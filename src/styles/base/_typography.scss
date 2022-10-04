@@ -19,22 +19,16 @@ textarea,
 button {
   font-family: #{config.$font-family}, $system-defaults;
   line-height: config.$line-height;
-
-  @if (config.$base-font-weight) {
-    font-variation-settings: "wght" config.$base-font-weight;
-
-    // Increase the weight of the base font
-    // ever so slightly for lower-DPI screens.
-    @media (max-resolution: 1.5dppx) {
-      font-variation-settings: "wght" config.$base-font-weight * 1.2;
-    }
-  }
 }
 
 input,
 textarea,
 button {
   font-size: 1rem;
+}
+
+p {
+  font-weight: 300;
 }
 
 p:first-child {
@@ -73,4 +67,11 @@ mark,
 ::selection {
   color: var(--foreground);
   background-color: var(--primary);
+}
+
+h1 {
+  &::after {
+    content: "_";
+    color: var(--primary);
+  }
 }
