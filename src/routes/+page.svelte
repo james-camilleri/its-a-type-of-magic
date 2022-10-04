@@ -1,8 +1,8 @@
 <script>
   import Slide from '$lib/components/layout/Slide.svelte'
 
-  import TypoLFA from '$assets/typo_lfa.mp4'
-  import CloseUps from '$assets/close-ups.mp4'
+  // import TypoLFA from '$assets/typo_lfa.mp4'
+  // import CloseUps from '$assets/close-ups.mp4'
 </script>
 
 <section data-background-color="black" />
