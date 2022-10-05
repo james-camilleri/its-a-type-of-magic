@@ -10,22 +10,24 @@
   import Crits_2 from '$assets/images/crits-2.jpg'
   import EECummings from '$assets/images/e-e-cummings.png'
   import ExquisiteCorpse from '$assets/images/exquisite-corpse.jpg'
+  import EyeCatcher from '$assets/images/eye-catcher.png'
+  import VennDiagram from '$assets/images/venn-diagram.png'
+  import LFA from '$assets/images/lfa.jpg'
   import LorenCarpenterHiveMind from '$assets/images/loren-carpenter-hive-mind.jpg'
   import MechanicalTurk from '$assets/images/mechanical-turk.jpg'
+  import ObliterationRoom from '$assets/images/obliteration-room.png'
   import OnJournalism2 from '$assets/images/on-journalism-2.jpg'
   import PriorArt from '$assets/images/prior-art.png'
   import Prototype_1 from '$assets/images/prototype-1.jpg'
   import Prototype_2 from '$assets/images/prototype-2.jpg'
-  import Spotlight from '$assets/images/spotlight.png'
-  import WhatIsDada from '$assets/images/what-is-dada.jpg'
-  import WizardOfOz from '$assets/images/wizard-of-oz.png'
-  import LFA from '$assets/images/lfa.jpg'
   import SonicBloom from '$assets/images/sonic-bloom.webp'
+  import Spotlight from '$assets/images/spotlight.png'
   import TedX from '$assets/images/ted-x.jpg'
   import TheatreTypes from '$assets/images/theatre-types.png'
+  import ThesisTitle from '$assets/images/thesis-title.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
-  import EyeCatcher from '$assets/images/eye-catcher.png'
-  import ObliterationRoom from '$assets/images/obliteration-room.png'
+  import WhatIsDada from '$assets/images/what-is-dada.jpg'
+  import WizardOfOz from '$assets/images/wizard-of-oz.png'
 </script>
 
 <section data-background-color="black" />
@@ -105,8 +107,51 @@
 <Slide image={TedX} />
 
 <Slide title="ars electronica festival" />
+
 <Slide title="thesis" subtitle="evina kipeni-thalassinou" />
+<Slide image={ThesisTitle} />
+<Slide image={VennDiagram} />
+<section>
+  <p>This thesis aims to answer the following questions:</p>
+  <p>
+    <em
+      >i) How do we create theatrical performances, with an electro/mechanical
+      typewriter linked to a computer, as the principle actor?</em
+    >
+  </p>
+</section>
+<section>
+  <p>This thesis aims to answer the following questions:</p>
+  <p>
+    i) How do we create theatrical performances, with an electro/mechanical
+    typewriter linked to a computer, as the principle actor?
+  </p>
+  <p>
+    <em> ii) What are the roles of the other participants?</em>
+  </p>
+</section>
+<section>
+  <p>This thesis aims to answer the following questions:</p>
+  <p>
+    i) How do we create theatrical performances, with an electro/mechanical
+    typewriter linked to a computer, as the principle actor?
+  </p>
+  <p>ii) What are the roles of the other participants?</p>
+  <p>
+    <em
+      >iii) How is the performance affected by the setting that it is placed in?</em
+    >
+  </p>
+</section>
 <Slide subtitle="interactive performance" />
+<section>
+  <p>
+    “Most commonly, we speak of interacting with another person, and the most
+    typical form of interaction is <em>a conversation</em>. Responsiveness is
+    part of interactivity, but it is not the entire story, interactivity
+    requires some kind of mutual <em>responsiveness</em>.” (Smuts, 2009).
+  </p>
+</section>
 <Slide subtitle="co-creation" />
 <Slide
   contain
@@ -133,8 +178,19 @@
   data-background-interactive="true"
 />
 <Slide image={TypoWithSoftware} />
+
 <!--
 caption={['Paul Smith']}
 caption={['F. Queiroz', 'Typewriter art (2018)']}
 caption={['M. Messinger', 'Typewriter Stories (2019)']}
 caption={['Rafael Lozano-Hemmer', 'Atmospheric Memory (2021)']} -->
+<style lang="scss">
+  p {
+    font-size: 1.5rem;
+    text-align: left;
+    // white-space: pre-line;
+    em {
+      color: var(--primary);
+    }
+  }
+</style>
