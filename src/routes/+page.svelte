@@ -7,19 +7,24 @@
   import CloseUps from '$assets/close-ups.mp4'
   import Lightbulb from '$assets/lightbulb.mp4'
 
+  import Ars_1 from '$assets/images/ars-1.jpg'
+  import Ars_2 from '$assets/images/ars-2.jpg'
+  import Ars_3 from '$assets/images/ars-3.jpg'
+  import AtmosphericMemory from '$assets/images/atmospheric-memory.png'
   import Bloomsbury from '$assets/images/bloomsbury.jpg'
+  import CameraFeed from '$assets/images/camera-feed.png'
+  import ConcretePoetry from '$assets/images/concrete-poetry.jpg'
   import Crits_1 from '$assets/images/crits-1.png'
   import Crits_2 from '$assets/images/crits-2.jpg'
   import EECummings from '$assets/images/e-e-cummings.png'
   import ExquisiteCorpse from '$assets/images/exquisite-corpse.jpg'
   import EyeCatcher from '$assets/images/eye-catcher.png'
-  import VennDiagram from '$assets/images/venn-diagram.png'
   import LFA from '$assets/images/lfa.jpg'
   import LorenCarpenterHiveMind from '$assets/images/loren-carpenter-hive-mind.jpg'
   import MechanicalTurk from '$assets/images/mechanical-turk.jpg'
   import ObliterationRoom from '$assets/images/obliteration-room.png'
   import OnJournalism2 from '$assets/images/on-journalism-2.jpg'
-  import CameraFeed from '$assets/images/camera-feed.png'
+  import PaulSmith from '$assets/images/paul-smith.jpg'
   import PriorArt from '$assets/images/prior-art.png'
   import Prototype_1 from '$assets/images/prototype-1.jpg'
   import Prototype_2 from '$assets/images/prototype-2.jpg'
@@ -27,15 +32,14 @@
   import Spotlight from '$assets/images/spotlight.png'
   import TedX_1 from '$assets/images/ted-x-1.jpg'
   import TedX_2 from '$assets/images/ted-x-2.jpg'
+  import Theatre from '$assets/images/theatre.png'
   import TheatreTypes from '$assets/images/theatre-types.png'
   import ThesisTitle from '$assets/images/thesis-title.png'
+  import TypewriterStories from '$assets/images/typewriter-stories.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
+  import VennDiagram from '$assets/images/venn-diagram.png'
   import WhatIsDada from '$assets/images/what-is-dada.jpg'
   import WizardOfOz from '$assets/images/wizard-of-oz.png'
-  import Theatre from '$assets/images/theatre.png'
-  import Ars_1 from '$assets/images/ars-1.jpg'
-  import Ars_2 from '$assets/images/ars-2.jpg'
-  import Ars_3 from '$assets/images/ars-3.jpg'
 </script>
 
 <section data-background-color="black" />
@@ -257,13 +261,22 @@
   data-background-iframe="https://typo.digital/live/test/poetry"
   data-background-interactive="true"
 />
+<Slide image={PaulSmith} caption={['Paul Smith']} />
+<Slide
+  image={ConcretePoetry}
+  caption={['F. Queiroz', 'Typewriter art (2018)']}
+/>
+<Slide
+  image={TypewriterStories}
+  caption={['M. Messinger', 'Typewriter Stories (2019)']}
+/>
+<Slide
+  image={AtmosphericMemory}
+  caption={['Rafael Lozano-Hemmer', 'Atmospheric Memory (2021)']}
+/>
+
 <Slide image={TypoWithSoftware} />
 
-<!--
-caption={['Paul Smith']}
-caption={['F. Queiroz', 'Typewriter art (2018)']}
-caption={['M. Messinger', 'Typewriter Stories (2019)']}
-caption={['Rafael Lozano-Hemmer', 'Atmospheric Memory (2021)']} -->
 <style lang="scss">
   p {
     font-size: 1.5rem;
