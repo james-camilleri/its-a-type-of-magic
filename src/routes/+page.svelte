@@ -17,17 +17,20 @@
   import MechanicalTurk from '$assets/images/mechanical-turk.jpg'
   import ObliterationRoom from '$assets/images/obliteration-room.png'
   import OnJournalism2 from '$assets/images/on-journalism-2.jpg'
+  import CameraFeed from '$assets/images/camera-feed.png'
   import PriorArt from '$assets/images/prior-art.png'
   import Prototype_1 from '$assets/images/prototype-1.jpg'
   import Prototype_2 from '$assets/images/prototype-2.jpg'
   import SonicBloom from '$assets/images/sonic-bloom.webp'
   import Spotlight from '$assets/images/spotlight.png'
-  import TedX from '$assets/images/ted-x.jpg'
+  import TedX_1 from '$assets/images/ted-x-1.jpg'
+  import TedX_2 from '$assets/images/ted-x-2.jpg'
   import TheatreTypes from '$assets/images/theatre-types.png'
   import ThesisTitle from '$assets/images/thesis-title.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
   import WhatIsDada from '$assets/images/what-is-dada.jpg'
   import WizardOfOz from '$assets/images/wizard-of-oz.png'
+  import Theatre from '$assets/images/theatre.png'
 </script>
 
 <section data-background-color="black" />
@@ -39,6 +42,7 @@
 <Slide video={TypoLFA} />
 
 <Slide title="concept" />
+<Slide image={Theatre} />
 <Slide
   image={LorenCarpenterHiveMind}
   caption={['Loren Carpenter', '“Hive Mind” Experiment (1991)']}
@@ -90,6 +94,7 @@
   image={MechanicalTurk}
   caption={['Mechanical Turk or Automaton Chess Player', '(18th century)']}
 />
+<Slide image={CameraFeed} />
 <Slide image={Spotlight} />
 <Slide
   image={EECummings}
@@ -104,7 +109,8 @@
 <Slide image={LFA} />
 
 <Slide title="TEDx goodenough college" />
-<Slide image={TedX} />
+<Slide image={TedX_1} />
+<Slide image={TedX_2} />
 
 <Slide title="ars electronica festival" />
 
@@ -171,6 +177,14 @@
   image={TheatreTypes}
   caption={['Different types of theater', 'Pinterest (n.d.)']}
 />
+<section>
+  <p>
+    <strong>
+      Typo brings together the analogue and digital elements in order to foster
+      the co-creation of a poetic piece.
+    </strong>
+  </p>
+</section>
 
 <Slide title="next steps" />
 <section
