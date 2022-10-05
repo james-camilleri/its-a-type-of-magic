@@ -1,6 +1,6 @@
 <script>
   import Slide from '$lib/components/layout/Slide.svelte'
-  import CodeExample from './CodeExample.svelte'
+  // import CodeExample from './CodeExample.svelte'
 
   import TypoLFA from '$assets/typo_lfa.mp4'
   import CloseUps from '$assets/close-ups.mp4'
