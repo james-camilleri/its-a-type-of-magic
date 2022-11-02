@@ -7,6 +7,7 @@
   import CloseUps from '$assets/close-ups.mp4'
   import Lightbulb from '$assets/lightbulb.mp4'
 
+  import Tutorial from '$assets/images/tutorial.png'
   import Ars_1 from '$assets/images/ars-1.jpg'
   import Ars_2 from '$assets/images/ars-2.jpg'
   import Ars_3 from '$assets/images/ars-3.jpg'
@@ -38,29 +39,64 @@
   import TypewriterStories from '$assets/images/typewriter-stories.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
   import VennDiagram from '$assets/images/venn-diagram.png'
-  import WhatIsDada from '$assets/images/what-is-dada.jpg'
+  import DadaPoetry from '$assets/images/dada-poetry.jpg'
   import WizardOfOz from '$assets/images/wizard-of-oz.png'
+  import Summary from './Summary.svelte'
 </script>
 
-<section data-background-color="black" />
 <Slide
-  title="typo"
+  title="&nbsp;typo"
   subtitle="james camilleri & evina kipeni-thalassinou"
   large
 />
-<Slide video={TypoLFA} />
+<Slide image={Tutorial} />
 
-<Slide title="concept" />
-<Slide image={Theatre} />
+<Summary />
+
+<Slide title="inspiration" />
+<Slide
+  video="https://giant.gfycat.com/FearfulCoordinatedDesertpupfish.mp4"
+  caption={[
+    'typewriter mechanics',
+    '',
+    'We were fascinated by the mechanics of vintage typewriters',
+  ]}
+/>
+<Slide
+  image={Theatre}
+  caption={[
+    'The theatre',
+    '',
+    'Our first pubic exhibition of Typo was in a theatre. Similarities between typewriters and theaters generated the idea of changing the role of the audience to co-creators by giving them the chance to create their own script while they are sitting.',
+  ]}
+/>
 <Slide
   image={LorenCarpenterHiveMind}
-  caption={['Loren Carpenter', '“Hive Mind” Experiment (1991)']}
+  caption={[
+    'Loren Carpenter',
+    '“Hive Mind” Experiment (1991)',
+    'An excellent example of interactive theatre performance, Loren Carpenter, a computer graphics developer and researcher, created a collaborative "Pong" game that audiences successfully in a theatre. A paddle with one red and one green side was left on each seat, and the audience realized that their movement of the paddles could affect what was depicted on screen. Participants played together, with no hierarchy, in order to achieve shared common goal. The purpose of the experiment was to prove that through the help of technology, humans could live and work in harmony, with computers connecting everyone (Costuna, 2017)',
+  ]}
 />
-<Slide image={WhatIsDada} />
-<Slide image={ExquisiteCorpse} contain caption={['Exquisite corpse']} />
+<Slide
+  image={DadaPoetry}
+  caption={[
+    'Dadaist poetry',
+    '',
+    'Dada was an art movement which formed during World War I in Zurich, as a reaction to the crimes of the war. The art, poetry, and performance produced by dada artists is often satirical and nonsensical in nature and helped inspire the kind of poetry the typewriter might create.',
+  ]}
+/>
+<Slide
+  image={ExquisiteCorpse}
+  contain
+  caption={[
+    'Exquisite corpse',
+    '',
+    'Another example similar to the Dada movement is the Exquisite Corpse. Exquisite Corpse is a collaborative drawing approach first used by surrealist artists to create bizarre and intuitive drawings.',
+  ]}
+/>
 
 <Slide title="construction" />
-<Slide video={CloseUps} loop={true} />
 <Slide image={PriorArt} caption={['Harvey Moon, Alfredo Salazar-Caro']} />
 <Slide
   image={OnJournalism2}
@@ -68,17 +104,15 @@
 />
 <Slide image={Prototype_1} />
 <!-- <Slide image={Prototype_2} /> -->
-<section
-  data-background-iframe="https://gallery.autodesk.com/projects/172467/assets/664311/embed"
-  data-background-interactive="true"
+<Slide
+  iframe="https://gallery.autodesk.com/projects/172467/assets/664311/embed"
 />
 <!-- <section
   data-background-iframe="https://gallery.autodesk.com/projects/172467/assets/664318/embed"
   data-background-interactive="true"
 /> -->
-<section
-  data-background-iframe="https://stately.ai/viz/embed/71a899bf-d43a-4f95-b687-0ddaf0cc4386?mode=viz&panel=code&showOriginalLink=1&readOnly=1&pan=1&zoom=1&controls=1"
-  data-background-interactive="true"
+<Slide
+  iframe="https://stately.ai/viz/embed/71a899bf-d43a-4f95-b687-0ddaf0cc4386?mode=viz&panel=code&showOriginalLink=1&readOnly=1&pan=1&zoom=1&controls=1"
 />
 <!-- TODO: Get the code in somehow. -->
 <!-- <CodeExample /> -->
@@ -95,10 +129,7 @@
 <Slide title="bloomsbury theatre" />
 <Slide image={Bloomsbury} />
 <Slide image={WizardOfOz} />
-<section
-  data-background-iframe="https://typo.digital/live/performance/bloomsbury"
-  data-background-interactive="true"
-/>
+<Slide iframe="https://typo.digital/live/performance/bloomsbury" />
 <Slide
   image={MechanicalTurk}
   caption={['Mechanical Turk or Automaton Chess Player', '(18th century)']}
@@ -132,7 +163,6 @@
 
 <Slide title="ars electronica festival" />
 <Slide image={Ars_1} contain />
-<Slide video={Lightbulb} />
 <Slide image={Ars_2} />
 <Slide image={Ars_3} />
 <Poem
@@ -257,10 +287,7 @@
 </section>
 
 <Slide title="next steps" />
-<section
-  data-background-iframe="https://typo.digital/live/test/poetry"
-  data-background-interactive="true"
-/>
+<Slide iframe="https://typo.digital/live/test/poetry" />
 <Slide image={PaulSmith} caption={['Paul Smith']} />
 <Slide
   image={ConcretePoetry}
@@ -281,7 +308,7 @@
   p {
     font-size: 1.5rem;
     text-align: left;
-    // white-space: pre-line;
+
     em {
       color: var(--primary);
     }
