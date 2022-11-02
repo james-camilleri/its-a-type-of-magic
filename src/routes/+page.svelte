@@ -1,13 +1,17 @@
 <script>
   import Slide from '$lib/components/layout/Slide.svelte'
   import Poem from './Poem.svelte'
+  import Interaction from './Interaction.svelte'
+  import VennDiagram from './VennDiagram.svelte'
   // import CodeExample from './CodeExample.svelte'
 
-  import TypoLFA from '$assets/typo_lfa.mp4'
-  import CloseUps from '$assets/close-ups.mp4'
-  import Lightbulb from '$assets/lightbulb.mp4'
-
   import Tutorial from '$assets/images/tutorial.png'
+  import Interaction1 from '$assets/images/interaction-1.jpg'
+  import Interaction2 from '$assets/images/interaction-2.jpg'
+  import Interaction3 from '$assets/images/interaction-3.jpg'
+  import Interaction4 from '$assets/images/interaction-4.jpg'
+  import Interaction5 from '$assets/images/interaction-5.jpg'
+  import Interaction6 from '$assets/images/interaction-6.jpg'
   import Ars_1 from '$assets/images/ars-1.jpg'
   import Ars_2 from '$assets/images/ars-2.jpg'
   import Ars_3 from '$assets/images/ars-3.jpg'
@@ -38,21 +42,25 @@
   import ThesisTitle from '$assets/images/thesis-title.png'
   import TypewriterStories from '$assets/images/typewriter-stories.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
-  import VennDiagram from '$assets/images/venn-diagram.png'
   import DadaPoetry from '$assets/images/dada-poetry.jpg'
   import WizardOfOz from '$assets/images/wizard-of-oz.png'
   import Summary from './Summary.svelte'
 </script>
 
+<!-- Introduction -->
 <Slide
   title="&nbsp;typo"
   subtitle="james camilleri & evina kipeni-thalassinou"
   large
 />
 <Slide image={Tutorial} />
-
 <Summary />
+<Slide image={LFA} />
+<!-- TODO: Some more images of typo -->
+<!-- <Slide image={LFA} />
+<Slide image={LFA} /> -->
 
+<!-- Inspiration -->
 <Slide title="inspiration" />
 <Slide
   video="https://giant.gfycat.com/FearfulCoordinatedDesertpupfish.mp4"
@@ -96,6 +104,36 @@
   ]}
 />
 
+<!-- Conceptual Approach -->
+<Slide title="conceptual approach" />
+<VennDiagram />
+<section>
+  <p>
+    “Most commonly, we speak of interacting with another person, and the most
+    typical form of interaction is <em>a conversation</em>. Responsiveness is
+    part of interactivity, but it is not the entire story, interactivity
+    requires some kind of mutual <em>responsiveness</em>.” (Smuts, 2009).
+  </p>
+</section>
+
+<!-- Interaction -->
+<Slide title="interaction" />
+<Interaction />
+<Slide
+  iframe="https://stately.ai/viz/embed/71a899bf-d43a-4f95-b687-0ddaf0cc4386?mode=viz&panel=code&showOriginalLink=1&readOnly=1&pan=1&zoom=1&controls=1"
+  caption={[
+    'interaction',
+    'state machine showing interaction states',
+    'The entire interaction is driven by a finite state machine under the hood, which allows us to clearly see the different states the software can be in diagrammatically.',
+  ]}
+/>
+
+<!-- Construction -->
+<!--
+  prior art
+  initial prototypes
+
+ -->
 <Slide title="construction" />
 <Slide image={PriorArt} caption={['Harvey Moon, Alfredo Salazar-Caro']} />
 <Slide
@@ -106,13 +144,19 @@
 <!-- <Slide image={Prototype_2} /> -->
 <Slide
   iframe="https://gallery.autodesk.com/projects/172467/assets/664311/embed"
+  caption={[
+    'carriage return lever',
+    '3d-printed model',
+    "This extension to the typewriter's carriage return lever allowed us to activate the line feed mechanism by using a hidden stepper motor under the typewriter. This was a lot more subtle and less error-prone than our initial designs, which used a string stretched across the top of the typewriter to pull the carriage return directly.",
+  ]}
 />
-<!-- <section
-  data-background-iframe="https://gallery.autodesk.com/projects/172467/assets/664318/embed"
-  data-background-interactive="true"
-/> -->
 <Slide
-  iframe="https://stately.ai/viz/embed/71a899bf-d43a-4f95-b687-0ddaf0cc4386?mode=viz&panel=code&showOriginalLink=1&readOnly=1&pan=1&zoom=1&controls=1"
+  iframe="https://gallery.autodesk.com/projects/172467/assets/664318/embed"
+  caption={[
+    'carriage return pulley housing',
+    '3d-printed model',
+    'This structure houses the limit switch and bearing which is used to move the carriage every line.',
+  ]}
 />
 <!-- TODO: Get the code in somehow. -->
 <!-- <CodeExample /> -->
@@ -213,78 +257,6 @@
   seeds={['brave', 'oven', 'finally']}
   poem={'The oven was finally brave\nAnd decided to come out of the cave\nIt had been hiding in for years\nIt was time to face its fears'}
 /> -->
-
-<Slide title="thesis" subtitle="evina kipeni-thalassinou" />
-<Slide image={ThesisTitle} />
-<Slide image={VennDiagram} />
-<section>
-  <p>This thesis aims to answer the following questions:</p>
-  <p>
-    <em
-      >i) How do we create theatrical performances, with an electro/mechanical
-      typewriter linked to a computer, as the principle actor?</em
-    >
-  </p>
-</section>
-<section>
-  <p>This thesis aims to answer the following questions:</p>
-  <p>
-    i) How do we create theatrical performances, with an electro/mechanical
-    typewriter linked to a computer, as the principle actor?
-  </p>
-  <p>
-    <em> ii) What are the roles of the other participants?</em>
-  </p>
-</section>
-<section>
-  <p>This thesis aims to answer the following questions:</p>
-  <p>
-    i) How do we create theatrical performances, with an electro/mechanical
-    typewriter linked to a computer, as the principle actor?
-  </p>
-  <p>ii) What are the roles of the other participants?</p>
-  <p>
-    <em
-      >iii) How is the performance affected by the setting that it is placed in?</em
-    >
-  </p>
-</section>
-<Slide subtitle="interactive performance" />
-<section>
-  <p>
-    “Most commonly, we speak of interacting with another person, and the most
-    typical form of interaction is <em>a conversation</em>. Responsiveness is
-    part of interactivity, but it is not the entire story, interactivity
-    requires some kind of mutual <em>responsiveness</em>.” (Smuts, 2009).
-  </p>
-</section>
-<Slide subtitle="co-creation" />
-<Slide
-  contain
-  image={ObliterationRoom}
-  caption={['Yayoi Kusama', 'Obliteration room']}
-/>
-<Slide subtitle="the &quot;gaze&quot; of the artwork" />
-<Slide
-  image={EyeCatcher}
-  caption={['(Charlie) Zhang Lin', 'Eye Catcher (2014)']}
-/>
-<Slide subtitle="typo as therapist" />
-<Slide image={SonicBloom} caption={['Yuri Suzuki', 'Sonic Bloom (2022)']} />
-<Slide subtitle="conclusion" />
-<Slide
-  contain
-  image={TheatreTypes}
-  caption={['Different types of theater', 'Pinterest (n.d.)']}
-/>
-<section>
-  <p>
-    <strong>
-      Typo brings together the analogue and digital elements in order to foster
-      the co-creation of a poetic piece.
-    </strong>
-  </p>
-</section>
 
 <Slide title="next steps" />
 <Slide iframe="https://typo.digital/live/test/poetry" />

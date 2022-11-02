@@ -27,8 +27,7 @@
   const navItems = {
     introduction: 1,
     inspiration: 1,
-    concept: 1,
-    thesis: 1,
+    'conceptual-approach': 1,
     'interaction-design': 1,
     construction: 1,
     performances: 1,
