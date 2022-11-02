@@ -7,7 +7,14 @@
   async function initialiseReveal() {
     const { default: Reveal } = await import('reveal.js')
     const deck = new Reveal()
-    deck.initialize({ center: false, preloadIframes: true })
+    deck.initialize({
+      center: false,
+      preloadIframes: true,
+      controlsTutorial: true,
+      hash: true,
+      respondToHashChanges: true,
+      autoPlayMedia: true,
+    })
   }
 
   if (browser) {
