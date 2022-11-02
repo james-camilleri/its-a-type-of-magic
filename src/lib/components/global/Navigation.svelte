@@ -1,20 +1,13 @@
 <script lang="ts">
-  import Cart from '@fortawesome/fontawesome-free/svgs/solid/cart-shopping.svg'
-  import User from '@fortawesome/fontawesome-free/svgs/solid/user.svg'
-
-  import type { RawNavItem } from '$lib/utils/urls'
-
   import { page } from '$app/stores'
-  import { normaliseNavItems } from '$lib/utils/urls'
-  import CONFIG from '$lib/config'
 
-  export let items: RawNavItem[] = []
+  export let items: Record<string, number>
 
   let navOpen = false
   // There's no way to use bind:this conditionally as of 20/02/2022, so
   // we need to store all refs and just use the first one for focus capture.
   let navItemRefs: HTMLElement[] = []
-  let menuButtonRef: HTMLElement = null
+  let menuButtonRef: null | HTMLElement = null
 
   function close() {
     navOpen = false
@@ -42,7 +35,7 @@
 
       if (navItemRefs[0] === document.activeElement && e.shiftKey) {
         e.preventDefault()
-        menuButtonRef.focus()
+        menuButtonRef?.focus()
         console.log('document.activeElement', document.activeElement)
         return
       }
@@ -54,32 +47,17 @@
 <div>
   <nav class:open={navOpen}>
     <ul>
-      {#each normaliseNavItems(items) as { text, link }, i}
+      {#each Object.entries(items) as [text, slideNumber]}
         <li>
           <a
             class="nav-item"
-            class:active={$page.url.pathname === link}
-            href={link}
+            href={$page.url.origin + `#/${slideNumber}`}
             on:click={close}
-            bind:this={navItemRefs[i]}
-            sveltekit:prefetch
           >
-            {text}
+            {text.replaceAll('-', ' ')}
           </a>
         </li>
       {/each}
-      {#if CONFIG.SNIPCART.enabled}
-        <div class="snipcart-icons">
-          <button class="snipcart-checkout nav-item">
-            <Cart />
-            <span class="screen-reader-only">Shopping cart</span>
-          </button>
-          <button class="snipcart-customer-signin nav-item">
-            <User />
-            <span class="screen-reader-only">My account</span>
-          </button>
-        </div>
-      {/if}
     </ul>
   </nav>
 
@@ -105,16 +83,16 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    z-index: 1;
+    left: 80vw;
+    z-index: 5;
 
     display: flex;
     flex-direction: column;
     overflow: auto;
 
-    font-size: var(--lg);
-    background: var(--background);
-    opacity: 0.98;
+    font-size: 1.3em;
+    background: var(--dark);
+    opacity: 0.9;
 
     transition: opacity var(--transition-fast) ease-in-out,
       transform 0s ease-in-out var(--transition-fast);
@@ -122,21 +100,6 @@
     &:not(.open) {
       opacity: 0;
       transform: translateY(100%);
-
-      // Undo transformations on desktop menu.
-      @media (min-width: breakpoints.$md) {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
-    // Desktop layout.
-    @media (min-width: breakpoints.$md) {
-      position: static;
-      margin-right: var(--lg);
-      font-size: var(--md);
-      opacity: 1;
-      transition: none;
     }
   }
 
@@ -145,12 +108,6 @@
     flex-direction: column;
     justify-content: center;
     margin: auto 0;
-
-    // Desktop layout.
-    @media (min-width: breakpoints.$md) {
-      flex-direction: row;
-      align-items: center;
-    }
   }
 
   .nav-item {
@@ -159,7 +116,7 @@
     --active-background: var(--secondary);
     --active-colour: var(--foreground);
 
-    color: var(--foreground);
+    color: var(--light);
     text-align: center;
     text-decoration: none;
     overflow-wrap: normal;
@@ -175,58 +132,18 @@
 
   a {
     display: block;
-    padding: var(--lg);
+    padding: var(--md);
 
     &:hover,
     &:focus {
       color: var(--hover-colour);
       background: var(--hover-background);
     }
-
-    // Desktop layout.
-    @media (min-width: breakpoints.$md) {
-      padding: var(--xs) var(--md);
-    }
   }
 
   a.active {
     color: var(--foreground);
     background: var(--secondary);
-  }
-
-  .snipcart-icons {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: var(--xxl);
-
-    @media (min-width: breakpoints.$md) {
-      margin-inline-start: var(--lg);
-      margin-top: 0;
-    }
-
-    > button {
-      width: var(--xxl);
-      height: var(--xxl);
-      padding: 0; // Safari fix. The icons are tiny otherwise.
-      margin: 0 var(--sm);
-
-      cursor: pointer;
-      background: none;
-      border: 0;
-
-      // Shrink buttons on desktop navigation.
-      @media (min-width: breakpoints.$md) {
-        width: var(--lg);
-        height: var(--lg);
-      }
-    }
-
-    > button:hover,
-    button:focus {
-      color: var(--hover-background);
-    }
   }
 
   .menu-button {
@@ -243,14 +160,15 @@
     --bar-height: calc(var(--bar-width) / 5);
 
     position: fixed;
+    top: var(--lg);
     right: var(--lg);
-    bottom: var(--lg);
-    z-index: 2;
+    z-index: 10;
     width: var(--size);
     height: var(--size);
     padding: var(--padding);
+    cursor: pointer;
 
-    background: var(--button-colour);
+    background: none;
     border: 0;
     border-radius: 100%;
     transition: transform var(--transition-fast) ease-in-out;
@@ -272,11 +190,6 @@
     // Scale button back down after it's cliccked on.
     &:focus:not(:focus-visible):not(:hover) {
       transform: scale(1);
-    }
-
-    // Hide the button on desktop.
-    @media (min-width: breakpoints.$md) {
-      display: none;
     }
   }
 
