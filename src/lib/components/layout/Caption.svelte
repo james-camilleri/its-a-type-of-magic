@@ -18,13 +18,17 @@
 
     {#if description}
       {#each description as text}
-        <p>{text}</p>
+        {#if text.includes('https')}
+          <p><a href={text} target="_blank" rel="”nofollow”">{text}</a></p>
+        {:else}
+          <p>{text}</p>
+        {/if}
       {/each}
     {/if}
   </div>
 {/if}
 
-<style>
+<style lang="scss">
   .caption {
     position: fixed;
     right: -250px;
@@ -51,5 +55,16 @@
 
   .underscore {
     color: var(--primary);
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-decoration-color: var(--primary);
+
+    &:hover {
+      color: var(--dark);
+      background: var(--primary);
+    }
   }
 </style>

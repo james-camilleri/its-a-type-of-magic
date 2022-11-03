@@ -12,6 +12,10 @@
   import Bloomsbury from '$assets/images/bloomsbury.jpg'
   import BloomsburySketch from '$assets/images/bloomsbury-sketch.png'
   import CameraFeed from '$assets/images/camera-feed.png'
+  import ChassisMetal from '$assets/images/chassis-metal.jpg'
+  import ChassisWood from '$assets/images/chassis-wood.jpg'
+  import cmsConversation from '$assets/images/cms-conversation.png'
+  import cmsQuestions from '$assets/images/cms-questions.png'
   import ConcretePoetry from '$assets/images/concrete-poetry.jpg'
   import Crits_1 from '$assets/images/crits-1.png'
   import Crits_2 from '$assets/images/crits-2.jpg'
@@ -20,6 +24,9 @@
   import Eliza from '$assets/images/eliza.png'
   import Equipment from '$assets/images/equipment.jpg'
   import ExquisiteCorpse from '$assets/images/exquisite-corpse.jpg'
+  import Fabrication1 from '$assets/images/fabrication-1.jpg'
+  import Fabrication2 from '$assets/images/fabrication-2.jpg'
+  import Fabrication3 from '$assets/images/fabrication-3.jpg'
   import LFA from '$assets/images/lfa.jpg'
   import LorenCarpenterHiveMind from '$assets/images/loren-carpenter-hive-mind.jpg'
   import MechanicalTurk from '$assets/images/mechanical-turk.jpg'
@@ -27,16 +34,20 @@
   import PaulSmith from '$assets/images/paul-smith.jpg'
   import PriorArt from '$assets/images/prior-art.png'
   import Prototype_1 from '$assets/images/prototype-1.jpg'
+  import publicSite from '$assets/images/public-site.png'
   import Spotlight from '$assets/images/spotlight.png'
   import Summary from './Summary.svelte'
   import TedX_1 from '$assets/images/ted-x-1.jpg'
   import TedX_2 from '$assets/images/ted-x-2.jpg'
   import Theatre from '$assets/images/theatre.png'
-  import Tutorial from '$assets/images/tutorial.png'
+  import Tutorial from '$assets/images/tutorial.svg'
   import TypewriterStories from '$assets/images/typewriter-stories.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
   import Wiring from '$assets/images/wiring.png'
   import WizardOfOz from '$assets/images/wizard-of-oz.png'
+
+  import Grid from '$lib/components/layout/Grid.svelte'
+  import CoverImage from './CoverImage.svelte'
 </script>
 
 <!-- Introduction -->
@@ -45,7 +56,7 @@
   subtitle="james camilleri & evina kipeni-thalassinou"
   large
 />
-<Slide image={Tutorial} />
+<section><Tutorial /></section>
 <Summary />
 <Slide image={TypoWithSoftware} />
 
@@ -68,7 +79,7 @@
       answer: 'axolotl',
     },
     { question: 'Make a wish!', answer: 'three days of rain' },
-    { question: 'Make a wish!', answer: 'three days of rain' },
+    { question: 'Make a wish!', answer: '5 days of rain' },
   ]}
   seeds={['axolotl', 'three', 'rain']}
   poem={'I sit by the window and watch\nthe rain fall in streaks\nI think of the axolotl\nand how it can regenerate\na lost limb\nI think of how we humans\nare not so different\nfrom this creature\nand how we, too,\ncan regenerate\nif we just have the will'}
@@ -164,19 +175,54 @@
 </section>
 
 <!-- Construction -->
-<!--
-  prior art
-  initial prototypes
-
- -->
 <Slide title="construction" />
-<Slide image={PriorArt} caption={['Harvey Moon, Alfredo Salazar-Caro']} />
+<Slide
+  image={PriorArt}
+  caption={[
+    'prior art',
+    'Harvey Moon, Alfredo Salazar-Caro',
+    'This project used car-door lock actuators and a relay array to move the typewriter keys. We made use of the same actuators for Typo but replaced the relay array with a DMX controller.',
+  ]}
+/>
 <Slide
   image={OnJournalism2}
-  caption={['Julian Koschwitz', '"On Journalism #2 Typewriter" (1992)']}
+  caption={[
+    'prior art',
+    'Julian Koschwitz',
+    '"On Journalism #2 Typewriter" (1992) inspired our final chassis design.',
+  ]}
 />
-<Slide image={Prototype_1} />
-<!-- <Slide image={Prototype_2} /> -->
+<Slide
+  image={Prototype_1}
+  caption={[
+    'early prototype',
+    '',
+    'Section of the original wooden prototype, showing the core electronic components.',
+  ]}
+/>
+<Slide
+  image={Wiring}
+  contain
+  caption={[
+    'early wiring diagram',
+    'a wiring diagram showing the basic electronic design of the system in an earlier prototype',
+  ]}
+/>
+<Slide caption={['chassis evolution']}>
+  <Grid columns={2}>
+    <img src={ChassisWood} alt="wooden chassis" />
+    <img src={ChassisMetal} alt="metal chassis" />
+  </Grid>
+</Slide>
+<Slide caption={['fabrication of metal chassis']}>
+  <Grid columns={2}>
+    <Grid>
+      <CoverImage src={Fabrication1} />
+      <CoverImage src={Fabrication2} />
+    </Grid>
+    <CoverImage src={Fabrication3} />
+  </Grid>
+</Slide>
 <Slide
   image={Equipment}
   caption={['components', 'all project components ready for transportation']}
@@ -198,18 +244,43 @@
   ]}
 />
 <Slide
-  image={Wiring}
+  image={publicSite}
   caption={[
-    'early wiring diagram',
-    'a wiring diagram showing the basic electronic design of the system in an earlier prototype',
+    'project website',
+    '',
+    'https://github.com/james-camilleri/typonline',
   ]}
 />
-<!-- TODO: Get the code in somehow. -->
-<!-- <CodeExample /> -->
-<!-- <section
-  data-background-iframe="https://github.com/james-camilleri/typewriter-dmx/blob/main/index.ts"
-  data-background-interactive="true"
+<!-- <Slide
+  image={interactionSoftware}
+  caption={[
+    'interaction software',
+    '',
+    'https://github.com/james-camilleri/typonline',
+  ]}
 /> -->
+<Slide
+  image={cmsConversation}
+  caption={[
+    'database interface',
+    'previous project conversations',
+    'https://github.com/james-camilleri/typonline',
+  ]}
+/>
+<Slide
+  image={cmsQuestions}
+  caption={[
+    'database interface',
+    'configuration of questions',
+    'https://github.com/james-camilleri/typonline',
+  ]}
+/>
+
+<!-- https://github.com/james-camilleri/typonline -->
+<!-- https://github.com/james-camilleri/typewriter-dmx -->
+
+<!-- Performances -->
+<Slide title="performances" />
 
 <Slide title="bloomsbury theatre" />
 <Slide image={Bloomsbury} />
@@ -225,15 +296,13 @@
   image={EECummings}
   caption={['e. e. cummings', 'Tulips & Chimneys (1922)']}
 />
-<section>
-  <p>
-    <strong>
-      hello we come of from darkness shall<br />
-      thank and ever be because heart death and<br />
-      brown the seem the body whose not<br />
-    </strong>
-  </p>
-</section>
+<Slide small>
+  <strong>
+    hello we come of from darkness shall<br />
+    thank and ever be because heart death and<br />
+    brown the seem the body whose not<br />
+  </strong>
+</Slide>
 
 <Slide title="here east" />
 <Slide image={Crits_1} />
@@ -273,10 +342,6 @@
 
     em {
       color: var(--primary);
-    }
-
-    strong {
-      font-weight: 700;
     }
   }
 </style>

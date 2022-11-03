@@ -26,10 +26,10 @@
 
   const navItems = {
     introduction: 1,
-    inspiration: 1,
-    'conceptual-approach': 1,
-    'interaction-design': 1,
-    construction: 1,
+    'interaction-design': 5,
+    inspiration: 13,
+    'conceptual-approach': 20,
+    construction: 23,
     performances: 1,
     'next-steps': 1,
     bibliography: 1,

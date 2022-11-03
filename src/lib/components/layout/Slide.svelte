@@ -81,6 +81,7 @@
   {#if displaySubtitle}
     <p class:subtitle-only={!title}>{subtitle}</p>
   {/if}
+  <slot />
 
   <Caption {caption} />
 </section>
