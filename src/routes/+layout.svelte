@@ -32,8 +32,7 @@
     construction: 23,
     performances: 38,
     'next-steps': 66,
-    bibliography: 1,
-    appendix: 1,
+    bibliography: 71,
   }
 </script>
 

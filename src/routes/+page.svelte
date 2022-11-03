@@ -508,12 +508,25 @@
 />
 <Slide
   image={TypewriterStories}
-  caption={['', 'M. Messinger, Typewriter Stories (2019)']}
+  caption={[
+    'different inputs',
+    'M. Messinger, Typewriter Stories (2019)',
+    "Potentially, Messinger's idea of using the buttons for people to type could be an option for Typo in case the participants do not like to say their answers out loud. This would actually make sense, as people are more familiar with typing on a typewriter instead of talking; and very often the audience's first reaction is to type.",
+  ]}
 />
 <Slide
   image={AtmosphericMemory}
-  caption={['', 'Rafael Lozano-Hemmer, Atmospheric Memory (2021)']}
+  caption={[
+    'multi-lingualcapability',
+    'Rafael Lozano-Hemmer, Atmospheric Memory (2021)',
+    'In Cloud Display ,a machine learning system recognizes people’s voices and displays the presented word made of pure water vapor. The project can work in most languages and recognizes different accents. (Lozano-Hemmer, 2019)',
+    'Language recognition could be a useful topic for Typo’s development, as there are some limitations noticed in regards to different languages and accents.',
+    'However, we can argue that these limitations are one of the main reasons Typo’s poems are abstract and unique; and this kind of poetry is the one Typo aims to represent, abstract and unpolished poetry.',
+  ]}
 />
+
+<!-- Bibliography -->
+<Slide title="next steps" />
 
 <style lang="scss">
   p {
