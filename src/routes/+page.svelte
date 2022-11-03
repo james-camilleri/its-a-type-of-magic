@@ -449,7 +449,7 @@
   caption={[
     'overseas arts festival',
     '',
-    'We were invited to exhbit at the Ars Electronica festival along with rest of the DfPI programme. We noted high levels of interest in our project due to presenting a physical artefact and not just digital documentation.',
+    'We were invited to exhbit at the Ars Electronica festival along with the rest of the DfPI programme. We noted high levels of interest in our project due to presenting a physical artefact and not just digital documentation.',
   ]}
 />
 <Slide
@@ -526,32 +526,55 @@
 />
 
 <!-- Bibliography -->
-<Slide title="next steps" />
+<Slide title="bibliography" />
 <Slide>
-  <div style="font-size: 1.2em">
+  <div class="bibliography">
     <p>
-      <strong>DfPI Spring Show</strong><br />
-      Bloomsbury Theater, London (May 2022)
+      <strong>
+        Costuna, C. (2017). $122m to ask one question? We can do better (or am I
+        California dreaming…)
+      </strong>
+      <a
+        href="https://medium.com/@chriscostuna/122m-to-ask-one-question-we-can-do-better-or-am-i-california-dreaming-88dde7e2657b"
+        >https://medium.com/@chriscostuna/122m-to-ask-one-question-we-can-do-better-or-am-i-california-dreaming-88dde7e2657b</a
+      >
     </p>
+
+    <p>Lozano-Hemmer, R. (2019). <strong>Cloud Display.</strong></p>
+
     <p>
-      <strong>Industry Showcase</strong><br />
-      Here East, London (June 2022)
+      Matore, D. (2017) <strong>
+        Cummings’s typewriter language: the typography of Tulips & Chimneys,
+        Textual Practice
+      </strong>, 31:7, 1509-1531, <br />
+      DOI: 10.1080/0950236X.2016.1237990 <br />
+      <a href="https://doi.org/10.1080/0950236X.2016.1237990"
+        >https://doi.org/10.1080/0950236X.2016.1237990</a
+      >
+      ISSN: 0950-236X (Print) 1470-1308 (Online) <br />
+      Journal homepage:
+      <a href="https://www.tandfonline.com/loi/rtpr20"
+        >https://www.tandfonline.com/loi/rtpr20</a
+      >
     </p>
+
     <p>
-      <strong>London Festival of Architecture</strong><br />
-      Here East, London (June 2022)
+      Smuts,A. (2009). <strong>What Is Interactivity?</strong><br />
+      The Journal of Aesthetic Education, WINTER 2009, Vol. 43, No. 4 pp. 53-73
+      <br />
+      Published by: University of Illinois Press <br />
+      Stable URL:
+      <a href="https://www.jstor.org/stable/25656247"
+        >https://www.jstor.org/stable/25656247</a
+      >
     </p>
+
     <p>
-      <strong>TEDx Goodenough College</strong><br />
-      Goodenough College, London (July 2022)
-    </p>
-    <p>
-      <strong>Ars Electronica</strong><br />
-      Linz, Austria (September 2022)
-    </p>
-    <p>
-      <strong>PUSH UX</strong><br />
-      Munich, Germany (November 2022)
+      Tate.org.uk, 2022 <br />
+      <a
+        href="https://www.tate.org.uk/art/art-terms/c/cadavre-exquis-exquisite-corpse"
+        >https://www.tate.org.uk/art/art-terms/c/cadavre-exquis-exquisite-corpse</a
+      >
     </p>
   </div>
 </Slide>
@@ -563,6 +586,23 @@
 
     em {
       color: var(--primary);
+    }
+  }
+
+  .bibliography {
+    p {
+      font-size: 1rem;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration-thickness: 0.1em;
+      text-decoration-color: var(--primary);
+
+      &:hover {
+        color: var(--dark);
+        background: var(--primary);
+      }
     }
   }
 </style>
