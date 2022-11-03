@@ -14,8 +14,8 @@
   import CameraFeed from '$assets/images/camera-feed.png'
   import ChassisMetal from '$assets/images/chassis-metal.jpg'
   import ChassisWood from '$assets/images/chassis-wood.jpg'
-  import cmsConversation from '$assets/images/cms-conversation.png'
-  import cmsQuestions from '$assets/images/cms-questions.png'
+  import CmsConversation from '$assets/images/cms-conversation.png'
+  import CmsQuestions from '$assets/images/cms-questions.png'
   import ConcretePoetry from '$assets/images/concrete-poetry.jpg'
   import Crits_1 from '$assets/images/crits-1.png'
   import Crits_2 from '$assets/images/crits-2.jpg'
@@ -24,9 +24,11 @@
   import Eliza from '$assets/images/eliza.png'
   import Equipment from '$assets/images/equipment.jpg'
   import ExquisiteCorpse from '$assets/images/exquisite-corpse.jpg'
+  import Fabrication from '$assets/images/Fabrication.png'
   import Fabrication1 from '$assets/images/fabrication-1.jpg'
   import Fabrication2 from '$assets/images/fabrication-2.jpg'
   import Fabrication3 from '$assets/images/fabrication-3.jpg'
+  import InteractionSoftware from '$assets/images/interaction-software.png'
   import LFA from '$assets/images/lfa.jpg'
   import LorenCarpenterHiveMind from '$assets/images/loren-carpenter-hive-mind.jpg'
   import MechanicalTurk from '$assets/images/mechanical-turk.jpg'
@@ -34,13 +36,14 @@
   import PaulSmith from '$assets/images/paul-smith.jpg'
   import PriorArt from '$assets/images/prior-art.png'
   import Prototype_1 from '$assets/images/prototype-1.jpg'
-  import publicSite from '$assets/images/public-site.png'
+  import PublicSite from '$assets/images/public-site.png'
   import Spotlight from '$assets/images/spotlight.png'
   import Summary from './Summary.svelte'
   import TedX_1 from '$assets/images/ted-x-1.jpg'
   import TedX_2 from '$assets/images/ted-x-2.jpg'
   import Theatre from '$assets/images/theatre.png'
   import Tutorial from '$assets/images/tutorial.svg'
+  import TypewriterDmx from '$assets/images/typewriter-dmx.png'
   import TypewriterStories from '$assets/images/typewriter-stories.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
   import Wiring from '$assets/images/wiring.png'
@@ -214,14 +217,14 @@
     <img src={ChassisMetal} alt="metal chassis" />
   </Grid>
 </Slide>
-<Slide caption={['fabrication of metal chassis']}>
-  <Grid columns={2}>
+<Slide image={Fabrication} caption={['fabrication of metal chassis']}>
+  <!-- <Grid columns={2}>
     <Grid>
       <CoverImage src={Fabrication1} />
       <CoverImage src={Fabrication2} />
     </Grid>
     <CoverImage src={Fabrication3} />
-  </Grid>
+  </Grid> -->
 </Slide>
 <Slide
   image={Equipment}
@@ -244,23 +247,23 @@
   ]}
 />
 <Slide
-  image={publicSite}
+  image={PublicSite}
   caption={[
     'project website',
     '',
     'https://github.com/james-camilleri/typonline',
   ]}
 />
-<!-- <Slide
-  image={interactionSoftware}
+<Slide
+  image={InteractionSoftware}
   caption={[
     'interaction software',
     '',
     'https://github.com/james-camilleri/typonline',
   ]}
-/> -->
+/>
 <Slide
-  image={cmsConversation}
+  image={CmsConversation}
   caption={[
     'database interface',
     'previous project conversations',
@@ -268,19 +271,52 @@
   ]}
 />
 <Slide
-  image={cmsQuestions}
+  image={CmsQuestions}
   caption={[
     'database interface',
     'configuration of questions',
     'https://github.com/james-camilleri/typonline',
   ]}
 />
-
-<!-- https://github.com/james-camilleri/typonline -->
-<!-- https://github.com/james-camilleri/typewriter-dmx -->
+<Slide
+  image={TypewriterDmx}
+  caption={[
+    'low-level hardware control software',
+    '',
+    'https://github.com/james-camilleri/typewriter-dmx',
+  ]}
+/>
 
 <!-- Performances -->
 <Slide title="performances" />
+<Slide>
+  <div style="font-size: 1.2em">
+    <p>
+      <strong>DfPI Spring Show</strong><br />
+      Bloomsbury Theater, London (May 2022)
+    </p>
+    <p>
+      <strong>Performance at Here East </strong><br />
+      Here East, London (June 2022)
+    </p>
+    <p>
+      <strong>London Festival of Architecture</strong><br />
+      Here East, London (June 2022)
+    </p>
+    <p>
+      <strong>TEDx Goodneough College</strong><br />
+      Goodenough College, London (July 2022)
+    </p>
+    <p>
+      <strong>Ars Electronica</strong><br />
+      Linz, Austria (September 2022)
+    </p>
+    <p>
+      <strong>PUSH UX</strong><br />
+      Munich, Germany (November 2022)
+    </p>
+  </div>
+</Slide>
 
 <Slide title="bloomsbury theatre" />
 <Slide image={Bloomsbury} />
