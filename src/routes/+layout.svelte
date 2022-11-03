@@ -31,7 +31,7 @@
     'conceptual-approach': 20,
     construction: 23,
     performances: 38,
-    'next-steps': 1,
+    'next-steps': 66,
     bibliography: 1,
     appendix: 1,
   }

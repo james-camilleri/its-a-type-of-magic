@@ -3,7 +3,6 @@
   import Poem from './Poem.svelte'
   import Interaction from './Interaction.svelte'
   import VennDiagram from './VennDiagram.svelte'
-  // import CodeExample from './CodeExample.svelte'
 
   import Ars_1 from '$assets/images/ars-1.jpg'
   import Ars_2 from '$assets/images/ars-2.jpg'
@@ -30,6 +29,7 @@
   import Fabrication3 from '$assets/images/fabrication-3.jpg'
   import InteractionSoftware from '$assets/images/interaction-software.png'
   import LFA from '$assets/images/lfa.jpg'
+  import LFA_2 from '$assets/images/lfa-2.jpg'
   import LorenCarpenterHiveMind from '$assets/images/loren-carpenter-hive-mind.jpg'
   import MechanicalTurk from '$assets/images/mechanical-turk.jpg'
   import OnJournalism2 from '$assets/images/on-journalism-2.jpg'
@@ -37,6 +37,8 @@
   import PriorArt from '$assets/images/prior-art.png'
   import Prototype_1 from '$assets/images/prototype-1.jpg'
   import PublicSite from '$assets/images/public-site.png'
+  import PushUx_1 from '$assets/images/push-ux-1.jpg'
+  import PushUx_2 from '$assets/images/push-ux-2.jpg'
   import Spotlight from '$assets/images/spotlight.png'
   import Summary from './Summary.svelte'
   import TedX_1 from '$assets/images/ted-x-1.jpg'
@@ -50,7 +52,6 @@
   import WizardOfOz from '$assets/images/wizard-of-oz.png'
 
   import Grid from '$lib/components/layout/Grid.svelte'
-  import CoverImage from './CoverImage.svelte'
 </script>
 
 <!-- Introduction -->
@@ -128,7 +129,7 @@
   caption={[
     'The theatre',
     '',
-    'Our first pubic exhibition of Typo was in a theatre. Similarities between typewriters and theaters generated the idea of changing the role of the audience to co-creators by giving them the chance to create their own script while they are sitting.',
+    'Our first public exhibition of Typo was in a theatre. Similarities between typewriters and theaters generated the idea of changing the role of the audience to co-creators by giving them the chance to create their own script while they are sitting.',
   ]}
 />
 <Slide
@@ -136,7 +137,7 @@
   caption={[
     'Loren Carpenter',
     '“Hive Mind” Experiment (1991)',
-    'An excellent example of interactive theatre performance, Loren Carpenter, a computer graphics developer and researcher, created a collaborative "Pong" game that audiences successfully in a theatre. A paddle with one red and one green side was left on each seat, and the audience realized that their movement of the paddles could affect what was depicted on screen. Participants played together, with no hierarchy, in order to achieve shared common goal. The purpose of the experiment was to prove that through the help of technology, humans could live and work in harmony, with computers connecting everyone (Costuna, 2017)',
+    'An excellent example of interactive theatre performance, Loren Carpenter, a computer graphics developer and researcher, created a collaborative "Pong" game that audiences successfully played in a theatre. A paddle with one red and one green side was left on each seat, and the audience realized that their movement of the paddles could affect what was depicted on screen. Participants played together, with no hierarchy, in order to achieve a common goal. The purpose of the experiment was to prove that through the help of technology, humans could live and work in harmony, with computers connecting everyone (Costuna, 2017).',
   ]}
 />
 <Slide
@@ -318,7 +319,7 @@
   </div>
 </Slide>
 
-<Slide title="DfPI Spring Show" subtitle="Bloomsbury Theater" />
+<Slide title="DfPI Spring Show" subtitle="Bloomsbury Theatre, London" />
 <Slide
   image={Bloomsbury}
   caption={[
@@ -354,10 +355,14 @@
 <Slide
   image={MechanicalTurk}
   caption={[
-    'Mechanical Turk or Automaton Chess Player',
+    'mechanical turk or automaton chess player',
     '(18th century)',
     'An early example of a "wizard of oz" technique, where a performer was hidden inside the base of a mechancial chess player which seemed to function autonomously.',
   ]}
+/>
+<Slide
+  image={BloomsburySketch}
+  caption={['initial concept sketches for bloomsbury interaction']}
 />
 <Slide
   iframe="https://typo.digital/live/performance/bloomsbury"
@@ -383,7 +388,7 @@
   </strong>
 </Slide>
 
-<Slide title="Industry Showcase" subtitle="Here East" />
+<Slide title="Industry Showcase" subtitle="Here East, London" />
 <Slide
   image={Crits_1}
   caption={[
@@ -401,7 +406,7 @@
   ]}
 />
 
-<Slide title="london festival of architecture" subtitle="Here East" />
+<Slide title="london festival of architecture" subtitle="Here East, London" />
 <Slide
   image={LFA}
   caption={[
@@ -411,7 +416,7 @@
   ]}
 />
 <Slide
-  image={LFA}
+  image={LFA_2}
   caption={[
     'personal attachment',
     '',
@@ -419,29 +424,95 @@
   ]}
 />
 
-<Slide title="TEDx goodenough college" />
-<Slide image={TedX_1} />
-<Slide image={TedX_2} />
+<Slide title="TEDx goodenough college" subtitle="Goodenough College, London" />
+<Slide
+  image={TedX_1}
+  caption={[
+    'public exhibition',
+    '',
+    'This was the first exhibition we were invited to outside of university, and sharing our work in an independently organised event was a great experience. A number of logistical challenges getting the project there had to be worked around.',
+  ]}
+/>
+<Slide
+  image={TedX_2}
+  caption={[
+    'audience feedback',
+    '',
+    'Audience feedback for the project was excellent, and the keynote speaker for the event was impressed enough to mention the project in her talk, which was very encouraging.',
+    'https://youtu.be/FjXTZp0n9uU?t=22520',
+  ]}
+/>
 
-<Slide title="ars electronica festival" />
-<Slide image={Ars_1} contain />
-<Slide image={Ars_2} />
-<Slide image={Ars_3} />
+<Slide title="ars electronica festival" subtitle="Kunstuniversität, Linz" />
+<Slide
+  image={Ars_2}
+  caption={[
+    'overseas arts festival',
+    '',
+    'We were invited to exhbit at the Ars Electronica festival along with rest of the DfPI programme. We noted high levels of interest in our project due to presenting a physical artefact and not just digital documentation.',
+  ]}
+/>
+<Slide
+  image={Ars_1}
+  contain
+  caption={[
+    'redesigned stand/chassis',
+    '',
+    'the redesigned was a lot easier to transport overseas, although the weight of the combined components still posed challenges for transport by air.',
+  ]}
+/>
+<Slide
+  image={Ars_3}
+  caption={[
+    'wear and tear',
+    '',
+    'We faced a few issues with wear and tear due to the duration of the exhibition, especialy with the antique typewriter, but feedback was positive and the installation was a success.',
+  ]}
+/>
+
+<Slide title="push ux" subtitle="Alte Kongresshalle, Munich" />
+<Slide
+  image={PushUx_1}
+  caption={[
+    'overseas public exhibition',
+    '',
+    'This was our second direct invitation to exhibit at a public event, and arose from people seeing our work at Ars Electronica. Setup was relaively trouble-free after the chassis redesign and the lessons learned at Ars Eletronica.',
+  ]}
+/>
+<Slide
+  image={PushUx_2}
+  caption={[
+    'improved poetry',
+    '',
+    'This was the first public performance after some tweaks to the AI configuration, which seemed to result in higher quality generated poems.',
+  ]}
+/>
 
 <!-- Next Steps -->
 <Slide title="next steps" />
-<Slide image={PaulSmith} caption={['Paul Smith']} />
+<Slide
+  image={PaulSmith}
+  caption={[
+    'typewriter-generated imagery',
+    'Paul Smith',
+    'Combining the typewriter with AI-generated imagery is a possible avenue for future enhancement.',
+  ]}
+/>
 <Slide
   image={ConcretePoetry}
-  caption={['F. Queiroz', 'Typewriter art (2018)']}
+  caption={[
+    'concrete poetry',
+    'F. Queiroz, Typewriter art (2018)',
+    'More abstract imagery, or imagery directly influence by the content of the text, could also be experimented with.',
+  ]}
 />
 <Slide
   image={TypewriterStories}
-  caption={['M. Messinger', 'Typewriter Stories (2019)']}
+  caption={['', 'M. Messinger, Typewriter Stories (2019)']}
 />
 <Slide
   image={AtmosphericMemory}
-  caption={['Rafael Lozano-Hemmer', 'Atmospheric Memory (2021)']}
+  caption={['', 'Rafael Lozano-Hemmer, Atmospheric Memory (2021)']}
 />
 
 <style lang="scss">
