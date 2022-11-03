@@ -18,7 +18,7 @@
   import DadaPoetry from '$assets/images/dada-poetry.jpg'
   import EECummings from '$assets/images/e-e-cummings.png'
   import Eliza from '$assets/images/eliza.png'
-  import Equipment from '$assets/images/equipment.png'
+  import Equipment from '$assets/images/equipment.jpg'
   import ExquisiteCorpse from '$assets/images/exquisite-corpse.jpg'
   import LFA from '$assets/images/lfa.jpg'
   import LorenCarpenterHiveMind from '$assets/images/loren-carpenter-hive-mind.jpg'
