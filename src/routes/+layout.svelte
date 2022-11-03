@@ -30,7 +30,7 @@
     inspiration: 13,
     'conceptual-approach': 20,
     construction: 23,
-    performances: 1,
+    performances: 38,
     'next-steps': 1,
     bibliography: 1,
     appendix: 1,
