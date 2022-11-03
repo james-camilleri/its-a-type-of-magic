@@ -319,7 +319,7 @@
   </div>
 </Slide>
 
-<Slide title="DfPI Spring Show" subtitle="Bloomsbury Theatre, London" />
+<Slide title="dfpi spring show" subtitle="Bloomsbury Theatre, London" />
 <Slide
   image={Bloomsbury}
   caption={[
@@ -388,7 +388,7 @@
   </strong>
 </Slide>
 
-<Slide title="Industry Showcase" subtitle="Here East, London" />
+<Slide title="industry showcase" subtitle="Here East, London" />
 <Slide
   image={Crits_1}
   caption={[
@@ -527,6 +527,34 @@
 
 <!-- Bibliography -->
 <Slide title="next steps" />
+<Slide>
+  <div style="font-size: 1.2em">
+    <p>
+      <strong>DfPI Spring Show</strong><br />
+      Bloomsbury Theater, London (May 2022)
+    </p>
+    <p>
+      <strong>Industry Showcase</strong><br />
+      Here East, London (June 2022)
+    </p>
+    <p>
+      <strong>London Festival of Architecture</strong><br />
+      Here East, London (June 2022)
+    </p>
+    <p>
+      <strong>TEDx Goodenough College</strong><br />
+      Goodenough College, London (July 2022)
+    </p>
+    <p>
+      <strong>Ars Electronica</strong><br />
+      Linz, Austria (September 2022)
+    </p>
+    <p>
+      <strong>PUSH UX</strong><br />
+      Munich, Germany (November 2022)
+    </p>
+  </div>
+</Slide>
 
 <style lang="scss">
   p {
