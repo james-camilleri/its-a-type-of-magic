@@ -5,46 +5,38 @@
   import VennDiagram from './VennDiagram.svelte'
   // import CodeExample from './CodeExample.svelte'
 
-  import Tutorial from '$assets/images/tutorial.png'
-  import Interaction1 from '$assets/images/interaction-1.jpg'
-  import Interaction2 from '$assets/images/interaction-2.jpg'
-  import Interaction3 from '$assets/images/interaction-3.jpg'
-  import Interaction4 from '$assets/images/interaction-4.jpg'
-  import Interaction5 from '$assets/images/interaction-5.jpg'
-  import Interaction6 from '$assets/images/interaction-6.jpg'
   import Ars_1 from '$assets/images/ars-1.jpg'
   import Ars_2 from '$assets/images/ars-2.jpg'
   import Ars_3 from '$assets/images/ars-3.jpg'
   import AtmosphericMemory from '$assets/images/atmospheric-memory.png'
   import Bloomsbury from '$assets/images/bloomsbury.jpg'
+  import BloomsburySketch from '$assets/images/bloomsbury-sketch.png'
   import CameraFeed from '$assets/images/camera-feed.png'
   import ConcretePoetry from '$assets/images/concrete-poetry.jpg'
   import Crits_1 from '$assets/images/crits-1.png'
   import Crits_2 from '$assets/images/crits-2.jpg'
+  import DadaPoetry from '$assets/images/dada-poetry.jpg'
   import EECummings from '$assets/images/e-e-cummings.png'
+  import Eliza from '$assets/images/eliza.png'
+  import Equipment from '$assets/images/equipment.png'
   import ExquisiteCorpse from '$assets/images/exquisite-corpse.jpg'
-  import EyeCatcher from '$assets/images/eye-catcher.png'
   import LFA from '$assets/images/lfa.jpg'
   import LorenCarpenterHiveMind from '$assets/images/loren-carpenter-hive-mind.jpg'
   import MechanicalTurk from '$assets/images/mechanical-turk.jpg'
-  import ObliterationRoom from '$assets/images/obliteration-room.png'
   import OnJournalism2 from '$assets/images/on-journalism-2.jpg'
   import PaulSmith from '$assets/images/paul-smith.jpg'
   import PriorArt from '$assets/images/prior-art.png'
   import Prototype_1 from '$assets/images/prototype-1.jpg'
-  import Prototype_2 from '$assets/images/prototype-2.jpg'
-  import SonicBloom from '$assets/images/sonic-bloom.webp'
   import Spotlight from '$assets/images/spotlight.png'
+  import Summary from './Summary.svelte'
   import TedX_1 from '$assets/images/ted-x-1.jpg'
   import TedX_2 from '$assets/images/ted-x-2.jpg'
   import Theatre from '$assets/images/theatre.png'
-  import TheatreTypes from '$assets/images/theatre-types.png'
-  import ThesisTitle from '$assets/images/thesis-title.png'
+  import Tutorial from '$assets/images/tutorial.png'
   import TypewriterStories from '$assets/images/typewriter-stories.png'
   import TypoWithSoftware from '$assets/images/typo-with-software.jpg'
-  import DadaPoetry from '$assets/images/dada-poetry.jpg'
+  import Wiring from '$assets/images/wiring.png'
   import WizardOfOz from '$assets/images/wizard-of-oz.png'
-  import Summary from './Summary.svelte'
 </script>
 
 <!-- Introduction -->
@@ -55,10 +47,57 @@
 />
 <Slide image={Tutorial} />
 <Summary />
-<Slide image={LFA} />
-<!-- TODO: Some more images of typo -->
-<!-- <Slide image={LFA} />
-<Slide image={LFA} /> -->
+<Slide image={TypoWithSoftware} />
+
+<!-- Interaction design -->
+<Slide title="interaction design" />
+<Interaction />
+<Slide
+  iframe="https://stately.ai/viz/embed/71a899bf-d43a-4f95-b687-0ddaf0cc4386?mode=viz&panel=code&showOriginalLink=1&readOnly=1&pan=1&zoom=1&controls=1"
+  caption={[
+    'interaction',
+    'state machine showing interaction states',
+    'The entire interaction is driven by a finite state machine under the hood, which allows us to clearly see the different states the software can be in diagrammatically.',
+  ]}
+/>
+<Slide subtitle="examples of poems created by Typo and its audience" />
+<Poem
+  conversation={[
+    {
+      question: 'Pick an animal you would like to be for a day.',
+      answer: 'axolotl',
+    },
+    { question: 'Make a wish!', answer: 'three days of rain' },
+    { question: 'Make a wish!', answer: 'three days of rain' },
+  ]}
+  seeds={['axolotl', 'three', 'rain']}
+  poem={'I sit by the window and watch\nthe rain fall in streaks\nI think of the axolotl\nand how it can regenerate\na lost limb\nI think of how we humans\nare not so different\nfrom this creature\nand how we, too,\ncan regenerate\nif we just have the will'}
+/>
+<Poem
+  conversation={[
+    { question: 'Coffee or tea?', answer: 't' },
+    { question: 'What are you proud of?', answer: 'wearing glasses' },
+    {
+      question: 'What is the title of your favourite song?',
+      answer: 'what a wonderful day',
+    },
+  ]}
+  seeds={['t', 'wearing', 'wonderful']}
+  poem={"My skin is wearing,\n wonderful wrinkles form.\nI'm still wonderful,\njust a little bit worn."}
+/>
+<Poem
+  conversation={[
+    { question: 'Make a wish!', answer: 'rainbow unicorn' },
+    { question: 'What is the colour of your eyes?', answer: 'brown' },
+    {
+      question: 'Think of a bad habit you would like to quit.',
+      answer: 'waking up late',
+    },
+  ]}
+  seeds={['unicorn', 'brown', 'late']}
+  poem={'There once was a Brown Unicorn,\nWho was Late for a Date with a Rhinoceros.'}
+/>
+<Slide iframe="https://typo.digital/generate/poetry" />
 
 <!-- Inspiration -->
 <Slide title="inspiration" />
@@ -103,6 +142,14 @@
     'Another example similar to the Dada movement is the Exquisite Corpse. Exquisite Corpse is a collaborative drawing approach first used by surrealist artists to create bizarre and intuitive drawings.',
   ]}
 />
+<Slide
+  image={Eliza}
+  caption={[
+    'Eliza',
+    'Joseph Weizenbaum',
+    'An early chatbot simulating a Rogerian psychotherapist, and one of the first pieces of software capable of attempting the Turing Test. Relied on relatively simple internal logic, but created a convincing illusion of intelligence.',
+  ]}
+/>
 
 <!-- Conceptual Approach -->
 <Slide title="conceptual approach" />
@@ -115,18 +162,6 @@
     requires some kind of mutual <em>responsiveness</em>.” (Smuts, 2009).
   </p>
 </section>
-
-<!-- Interaction -->
-<Slide title="interaction" />
-<Interaction />
-<Slide
-  iframe="https://stately.ai/viz/embed/71a899bf-d43a-4f95-b687-0ddaf0cc4386?mode=viz&panel=code&showOriginalLink=1&readOnly=1&pan=1&zoom=1&controls=1"
-  caption={[
-    'interaction',
-    'state machine showing interaction states',
-    'The entire interaction is driven by a finite state machine under the hood, which allows us to clearly see the different states the software can be in diagrammatically.',
-  ]}
-/>
 
 <!-- Construction -->
 <!--
@@ -143,6 +178,10 @@
 <Slide image={Prototype_1} />
 <!-- <Slide image={Prototype_2} /> -->
 <Slide
+  image={Equipment}
+  caption={['components', 'all project components ready for transportation']}
+/>
+<Slide
   iframe="https://gallery.autodesk.com/projects/172467/assets/664311/embed"
   caption={[
     'carriage return lever',
@@ -158,17 +197,19 @@
     'This structure houses the limit switch and bearing which is used to move the carriage every line.',
   ]}
 />
+<Slide
+  image={Wiring}
+  caption={[
+    'early wiring diagram',
+    'a wiring diagram showing the basic electronic design of the system in an earlier prototype',
+  ]}
+/>
 <!-- TODO: Get the code in somehow. -->
 <!-- <CodeExample /> -->
 <!-- <section
   data-background-iframe="https://github.com/james-camilleri/typewriter-dmx/blob/main/index.ts"
   data-background-interactive="true"
 /> -->
-<!-- <section
-  data-background-iframe="https://www.masswerk.at/elizabot/eliza.html"
-  data-background-interactive="true"
-  /> -->
-<!-- TODO: ELIZAAAAA -->
 
 <Slide title="bloomsbury theatre" />
 <Slide image={Bloomsbury} />
@@ -209,57 +250,8 @@
 <Slide image={Ars_1} contain />
 <Slide image={Ars_2} />
 <Slide image={Ars_3} />
-<Poem
-  conversation={[
-    {
-      question: 'Pick an animal you would like to be for a day.',
-      answer: 'axolotl',
-    },
-    { question: 'Make a wish!', answer: 'three days of rain' },
-    { question: 'Make a wish!', answer: 'three days of rain' },
-  ]}
-  seeds={['axolotl', 'three', 'rain']}
-  poem={'I sit by the window and watch\nthe rain fall in streaks\nI think of the axolotl\nand how it can regenerate\na lost limb\nI think of how we humans\nare not so different\nfrom this creature\nand how we, too,\ncan regenerate\nif we just have the will'}
-/>
-<Poem
-  conversation={[
-    { question: 'Coffee or tea?', answer: 't' },
-    { question: 'What are you proud of?', answer: 'wearing glasses' },
-    {
-      question: 'What is the title of your favourite song?',
-      answer: 'what a wonderful day',
-    },
-  ]}
-  seeds={['t', 'wearing', 'wonderful']}
-  poem={"My skin is wearing,\n wonderful wrinkles form.\nI'm still wonderful,\njust a little bit worn."}
-/>
-<Poem
-  conversation={[
-    { question: 'Make a wish!', answer: 'rainbow unicorn' },
-    { question: 'What is the colour of your eyes?', answer: 'brown' },
-    {
-      question: 'Think of a bad habit you would like to quit.',
-      answer: 'answerwaking up late',
-    },
-  ]}
-  seeds={['unicorn', 'brown', 'late']}
-  poem={'There once was a Brown Unicorn,\nWho was Late for a Date with a Rhinoceros.'}
-/>
-<!-- <Poem
-  conversation={[
-    { question: 'In which month is your birthday?', answer: ' I didn\'t even know babe like and everybody that I\'ve changed' },
-    { question: 'What is the colour of your eyes?', answer: 'brown' },
-    {
-      question: 'Think of a bad habit you would like to quit.',
-      answer: 'answerwaking up late',
-    },
-  ]}
-  seeds={['brave', 'oven', 'finally']}
-  poem={'The oven was finally brave\nAnd decided to come out of the cave\nIt had been hiding in for years\nIt was time to face its fears'}
-/> -->
 
 <Slide title="next steps" />
-<Slide iframe="https://typo.digital/live/test/poetry" />
 <Slide image={PaulSmith} caption={['Paul Smith']} />
 <Slide
   image={ConcretePoetry}
@@ -273,8 +265,6 @@
   image={AtmosphericMemory}
   caption={['Rafael Lozano-Hemmer', 'Atmospheric Memory (2021)']}
 />
-
-<Slide image={TypoWithSoftware} />
 
 <style lang="scss">
   p {
