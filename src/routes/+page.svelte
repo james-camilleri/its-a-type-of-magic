@@ -23,7 +23,7 @@
   import Eliza from '$assets/images/eliza.png'
   import Equipment from '$assets/images/equipment.jpg'
   import ExquisiteCorpse from '$assets/images/exquisite-corpse.jpg'
-  import Fabrication from '$assets/images/Fabrication.png'
+  import Fabrication from '$assets/images/fabrication.png'
   import Fabrication1 from '$assets/images/fabrication-1.jpg'
   import Fabrication2 from '$assets/images/fabrication-2.jpg'
   import Fabrication3 from '$assets/images/fabrication-3.jpg'
