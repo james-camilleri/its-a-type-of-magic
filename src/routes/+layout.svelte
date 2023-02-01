@@ -1,14 +1,48 @@
 <script lang="ts">
   import 'reveal.js/dist/reveal.css'
   import 'reveal.js/dist/theme/white.css'
+  // import 'reveal.js/plugin/highlight/monokai.css'
+  import '../styles/syntax-highlight.css'
   import '../styles/global.scss'
   import { browser } from '$app/environment'
 
   import Navigation from '$lib/components/global/Navigation.svelte'
 
+  let time = 0
+  let interval: number
+
+  function keyListener(e: KeyboardEvent) {
+    if (e.key === 't') {
+      interval ? stopTimer() : startTimer()
+    }
+  }
+
+  function startTimer() {
+    interval = setInterval(() => {
+      time++
+    }, 1000)
+  }
+
+  function stopTimer() {
+    clearInterval(interval)
+    interval = 0
+  }
+
+  function pad(number: number) {
+    const string = number.toString()
+    return string.length === 1 ? `0${string}` : string
+  }
+
   async function initialiseReveal() {
     const { default: Reveal } = await import('reveal.js')
-    const deck = new Reveal()
+    const { default: RevealHighlight } = await import(
+      'reveal.js/plugin/highlight/highlight.js'
+    )
+
+    const deck = new Reveal({
+      plugins: [RevealHighlight],
+    })
+
     deck.initialize({
       center: false,
       preloadIframes: true,
@@ -36,11 +70,15 @@
   }
 </script>
 
+<svelte:window on:keydown={keyListener} />
 <Navigation items={navItems} />
 <div class="reveal">
   <div class="slides">
     <slot />
   </div>
+</div>
+<div class="timer">
+  {pad(Math.floor(time / 60))}<span>:</span>{pad(time % 60)}
 </div>
 
 <style lang="scss">
@@ -55,6 +93,20 @@
       flex-direction: column !important;
       justify-content: center !important;
       height: 100%;
+    }
+  }
+
+  .timer {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1;
+    opacity: 0.5;
+
+    span {
+      position: relative;
+      top: -0.1em;
+      color: var(--primary);
     }
   }
 </style>

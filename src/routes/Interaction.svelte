@@ -46,7 +46,7 @@
 </section>
 
 <style>
-  div {
+  .wrapper {
     position: relative;
   }
 

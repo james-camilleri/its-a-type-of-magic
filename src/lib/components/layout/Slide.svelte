@@ -27,10 +27,11 @@
     : video
     ? {
         'data-background-video': video,
-        'data-background-video-loop': loop,
+        'data-background-video-loop': loop || undefined,
       }
     : iframe
     ? {
+        'data-preload': true,
         'data-background-iframe': iframe,
         'data-background-interactive': true,
       }
