@@ -101,11 +101,17 @@
     bottom: 2rem;
     left: 2rem;
     z-index: 1;
+    width: 3rem;
+    padding: 0.2rem 0.2rem 0.1rem;
+    text-align: center;
+    background: var(--r-background-color);
+    border-radius: 1px;
     opacity: 0.5;
 
     span {
       position: relative;
       top: -0.1em;
+      padding: 0 0.05rem;
       color: var(--primary);
     }
   }
